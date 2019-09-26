@@ -69,5 +69,24 @@ def average_above_zero(table):
    return Moy
    
 
-tableau=[0,5,10] 
+tableau=[0,3,5] 
 print('moyenne:',average_above_zero(tableau))
+
+
+#fonction pour retourner la valeur max du tableau
+#on va définir une valeur max a zéro et elle va prendre
+#la valeur changera lorsqu'une valeur plus grande sera
+#trouvée dans le tableau
+
+def max_value(table):
+ #  return max(table)
+   maxi=0
+
+   for i in range(len(table)): 
+       if table[i] >maxi:
+           maxi = table[i]
+         
+   return maxi
+
+
+print('valeur max:',max_value(tableau))
