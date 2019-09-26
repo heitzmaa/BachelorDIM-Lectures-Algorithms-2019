@@ -77,6 +77,7 @@ print('moyenne:',average_above_zero(tableau))
 #on va définir une valeur max a zéro et elle va prendre
 #la valeur changera lorsqu'une valeur plus grande sera
 #trouvée dans le tableau
+# et qui va retourner l'index
 
 def max_value(table):
  #  return max(table)
@@ -86,7 +87,23 @@ def max_value(table):
        if table[i] >maxi:
            maxi = table[i]
          
+   return(maxi, i)
+
+
+print('valeur max et son index:',max_value(tableau))
+
+
+#fonction qui va inverser le tableau
+"""
+def reverse_table(table):
+
+   maxi=0
+
+   for i in range(len(table)): 
+       if table[i] >maxi:
+           maxi = table[i]
+         
    return maxi
 
 
-print('valeur max:',max_value(tableau))
+print('tableau inversé:',reverse_table(tableau))"""
