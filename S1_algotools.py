@@ -58,15 +58,30 @@ print('sum Test:',mySum(3,4))
 #fonction qui va calculer la moyenne d'un tableau rentré
 
 def average_above_zero(table):
-   Som=0
-   N=0
-
-   for i in range(len(table)): 
-       if table[i] >0:
-           Som = Som + table[i]
-           N= N+1
-   Moy = Som/ N
-   return Moy
+    '''
+    computes the average of positive values
+    Args: a list of values
+    returns: the average of positive values
+    raise value error if input param is not a list
+    '''
+    
+    if not(isinstance(table,list)):
+        raise ValueError('average_above_zero, expected a list as input')
+    if len(table)==0:
+        raise ValueError('expected a non empty a list as input')
+    if not(isinstance(table[0], (int,float))):
+        raise ValueError('average_above_zero, expected a list of numbers')
+        
+    
+    Som=0
+    N=0
+        
+    for i in range(len(table)): 
+        if table[i] >0:
+            Som = Som + table[i]
+            N= N+1
+    Moy = Som/ N
+    return Moy
    
 
 tableau=[0,3,5] 
@@ -94,7 +109,7 @@ print('valeur max et son index:',max_value(tableau))
 
 
 #fonction qui va inverser le tableau
-"""
+'''
 def reverse_table(table):
 
    maxi=0
@@ -106,4 +121,5 @@ def reverse_table(table):
    return maxi
 
 
-print('tableau inversé:',reverse_table(tableau))"""
+print('tableau inversé:',reverse_table(tableau))
+'''
