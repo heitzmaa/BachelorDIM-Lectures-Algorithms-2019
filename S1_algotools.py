@@ -153,4 +153,4 @@ cv2.imshow('read image',img)
 cv2.waitKey()
 
 
-
+#cv2.boundingRect(cnt) for x, y 
