@@ -38,7 +38,7 @@ for id in range (len(tab_fromList)):
         
 print('finished')
 
-"""--------------------------------------------------------"""
+"""---------------------------------------------------"""
 
 def mySum(param1, param2):
     
@@ -53,9 +53,9 @@ def mySum(param1, param2):
     return param1+param2
 
 print('sum Test:',mySum(3,4))
+"""--------------------------------------------------"""
 
-
-#fonction qui va calculer la moyenne d'un tableau rentré
+"""fonction qui va calculer la moyenne d'un tableau rentré"""
 
 def average_above_zero(table):
     '''
@@ -87,12 +87,13 @@ def average_above_zero(table):
 tableau=[0,3,5] 
 print('moyenne:',average_above_zero(tableau))
 
+"""-------------------------------------------------"""
 
-#fonction pour retourner la valeur max du tableau
-#on va définir une valeur max a zéro et elle va prendre
-#la valeur changera lorsqu'une valeur plus grande sera
-#trouvée dans le tableau
-# et qui va retourner l'index
+"""fonction pour retourner la valeur max du tableau
+on va définir une valeur max a zéro et elle va prendre
+la valeur changera lorsqu'une valeur plus grande sera
+trouvée dans le tableau
+ et qui va retourner l'index"""
 
 def max_value(table):
  #  return max(table)
@@ -107,23 +108,49 @@ def max_value(table):
 
 print('valeur max et son index:',max_value(tableau))
 
+"""-------------------------------------------------"""
 
-#fonction qui va inverser le tableau
-#reverse_a = a[::-1]
-#Args: a list of values
-#return : reversed table
+"""fonction qui va inverser le tableau
+
+Args: a list of values
+return : reversed table
+print(tableau[::-1])
+print(tableau.reverse())"""
 
 def reverse_in_place(table):     
     size = len(table)            
-    hiindex = size - 1
-    its = size//2                
+    index = size - 1
+    its = size//2    # int(size/2)            
     for i in range(its):    
-        temp = table[hiindex]    
-        table[hiindex] = table[i]
+        temp = table[index]    
+        table[index] = table[i]
         table[i] = temp
-        hiindex -= 1
+        index -= 1
     return(table)
 
 print('tableau inversé:',reverse_in_place(tableau))
+
+
+"""------------------------------------------------"""
+
+#import numpy as np
+import cv2
+
+    #def roi_bbox(input_image : numpy array)
+    
+matrix=np.zeros((10,10),dtype=np.int32)
+
+matrix[3:6, 4:8]=np.ones((3,4),dtype=np.int32)
+
+for idrow in range(matrix.shape[0]):
+    for idcol in range (matrix.shape[1]):
+        pixVal=matrix[idrow,idcol]
+        
+
+
+img=cv2.imread('img.png',0)
+cv2.imshow('read image',img)
+cv2.waitKey()
+
 
 
