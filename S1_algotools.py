@@ -110,20 +110,20 @@ print('valeur max et son index:',max_value(tableau))
 
 #fonction qui va inverser le tableau
 #reverse_a = a[::-1]
-'''
-def reverse_table(table):
+#Args: a list of values
+#return : reversed table
 
-   maxi=0
+def reverse_in_place(table):     
+    size = len(table)            
+    hiindex = size - 1
+    its = size//2                
+    for i in range(its):    
+        temp = table[hiindex]    
+        table[hiindex] = table[i]
+        table[i] = temp
+        hiindex -= 1
+    return(table)
 
-   for i in range(len(table)): 
-       if table[i] >maxi:
-           maxi = table[i]
-         
-   return maxi
-
-
-print('tableau inversé:',reverse_table(tableau))
-'''
-
+print('tableau inversé:',reverse_in_place(tableau))
 
 
