@@ -109,6 +109,7 @@ print('valeur max et son index:',max_value(tableau))
 
 
 #fonction qui va inverser le tableau
+#reverse_a = a[::-1]
 '''
 def reverse_table(table):
 
@@ -123,3 +124,6 @@ def reverse_table(table):
 
 print('tableau inversé:',reverse_table(tableau))
 '''
+
+
+
