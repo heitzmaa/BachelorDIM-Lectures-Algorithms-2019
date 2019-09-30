@@ -137,7 +137,7 @@ print('tableau inversé:',reverse_in_place(tableau))
 import cv2
 
     #def roi_bbox(input_image : numpy array)
-    
+   
 matrix=np.zeros((10,10),dtype=np.int32)
 
 matrix[3:6, 4:8]=np.ones((3,4),dtype=np.int32)
@@ -145,12 +145,43 @@ matrix[3:6, 4:8]=np.ones((3,4),dtype=np.int32)
 for idrow in range(matrix.shape[0]):
     for idcol in range (matrix.shape[1]):
         pixVal=matrix[idrow,idcol]
-        
-
-
+"""
 img=cv2.imread('img.png',0)
 cv2.imshow('read image',img)
 cv2.waitKey()
+"""
+ #cv2.boundingRect(cnt) for x, y 
+
+        top= H
+        bottom=0
+        left=
+        right=
+        
+        for col in range(L):
+            for row in range(H):
+                if mat[row,col]==1:
+                    
+                    if top == -1:
+                        top = row
+                        break
+                    
+                    if top!=-1:
+                        break
+                    
+                   """ 
+                    if top > row:
+                        top=row
+                    
+                    if bottom < row:
+                        bottom = row
+                
+                    if left < col:
+                        left=col
+                    
+                    if right > col:
+                        right = col
+                   """
 
 
-#cv2.boundingRect(cnt) for x, y 
+
+
