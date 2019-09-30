@@ -3,7 +3,7 @@
 """
 Created on Sun Sep 29 21:44:54 2019
 
-@author: alben
+@author: heitzmaa
 """
 import S1_algotools as algo
 import pytest
