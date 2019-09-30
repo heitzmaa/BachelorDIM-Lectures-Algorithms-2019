@@ -39,3 +39,5 @@ def test_average_above_zero_V4():
    with pytest.raises(ZeroDivisionError):
         tableau=[]
         algo.average_above_zero(tableau)
+        
+"""dffdf """
