@@ -26,7 +26,7 @@ def test_average_above_zero_V1():
    
 def test_average_above_zero_V2():
    tableau=[0,-3,5]
-   test, lastID=algo.average_above_zero(tableau)
+   test=algo.average_above_zero(tableau)
    assert test ==4
 
 """  
