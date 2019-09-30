@@ -134,7 +134,7 @@ print('tableau inversé:',reverse_in_place(tableau))
 """------------------------------------------------"""
 
 #import numpy as np
-import cv2
+#↨import cv2
 
     #def roi_bbox(input_image : numpy array)
    
