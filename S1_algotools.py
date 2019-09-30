@@ -102,6 +102,7 @@ def max_value(table):
    for i in range(len(table)): 
        if table[i] >maxi:
            maxi = table[i]
+          
          
    return(maxi, i)
 
