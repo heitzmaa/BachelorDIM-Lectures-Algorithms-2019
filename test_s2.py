@@ -36,8 +36,25 @@ def test_average_above_zero_V3():
         algo.average_above_zero(tableau)
       
 def test_average_above_zero_V4():
-   with pytest.raises("average_above_zero, expected a list as input"):
+   with pytest.raises(ValueError):
         tableau=[]
+        algo.average_above_zero(tableau)
+  
+def test_average_above_zero_V5():
+   with pytest.raises(ValueError):
+        tableau=["ee","d","n"]
         algo.average_above_zero(tableau)
         
 """------------------------------------ """
+def test_max_value_V1():
+    tableau=[0,5,4]
+    test=algo.max_value(tableau)
+    assert test== (5,2)
+    
+"""------------------------------------"""  
+def test_reverse_in_place_V1(): 
+    tableau=[0,5,4]
+    test=algo.reverse_in_place(tableau)
+    assert test== [4,5,0]
+
+
