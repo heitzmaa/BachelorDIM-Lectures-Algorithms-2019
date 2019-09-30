@@ -30,9 +30,12 @@ def test_average_above_zero_V2():
    test=algo.average_above_zero(tableau)
    assert test ==5
 
-
 def test_average_above_zero_V3():
    with pytest.raises(ZeroDivisionError):
         tableau=[-8,-3,-5]
         algo.average_above_zero(tableau)
       
+def test_average_above_zero_V4():
+   with pytest.raises(ZeroDivisionError):
+        tableau=[]
+        algo.average_above_zero(tableau)
