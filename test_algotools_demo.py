@@ -12,7 +12,7 @@ def inc_(x):
     return x+1
 
 def test_inc():
-    assert inc_(3)==5
+    assert inc_(3)==4
 
 def test_divide_by_zero():
     with pytest.raises(ZeroDivisionError):
