@@ -152,7 +152,7 @@ cv2.waitKey()
 """
  #cv2.boundingRect(cnt) for x, y 
 
-        top= H
+"""       top= H
         bottom=0
         left=
         right=
@@ -167,8 +167,8 @@ cv2.waitKey()
                     
                     if top!=-1:
                         break
-                    
-                   """ 
+                    --------------------
+                
                     if top > row:
                         top=row
                     
