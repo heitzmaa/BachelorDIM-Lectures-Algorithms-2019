@@ -23,14 +23,15 @@ def test_divide_by_zero():
 def test_average_above_zero_V1():
    tableau=[0,3,5]
    test, lastID=algo.average_above_zero(tableau)
-   assert test ==4
+   assert lastID ==4
    
 def test_average_above_zero_V2():
    tableau=[0,-3,5]
    test, lastID=algo.average_above_zero(tableau)
-   assert test ==4
-   
+   assert lastID ==4
+
+"""  
 def test_average_above_zero_V3():
    tableau=[0,-3,5]
    test, lastID=algo.average_above_zero(tableau)
-   assert test ==4
+   assert test ==4"""
