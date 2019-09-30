@@ -36,8 +36,8 @@ def test_average_above_zero_V3():
         algo.average_above_zero(tableau)
       
 def test_average_above_zero_V4():
-   with pytest.raises(ZeroDivisionError):
+   with pytest.raises("average_above_zero, expected a list as input"):
         tableau=[]
         algo.average_above_zero(tableau)
         
-"""dffdf """
+"""------------------------------------ """
