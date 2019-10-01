@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Tue Oct  1 08:56:05 2019
+
+@author: heitzmaa
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Mon Sep 30 15:58:54 2019
 
 @author: heitzmaa
@@ -21,8 +28,7 @@ import pika
 mode='SEND' #set 'SEND' mode is you will to send rather than receive messages
 
 
-def callback(ch, method, properties, body):
-    print(" [x] Received %r" % body)
+
 
 
 
@@ -49,16 +55,4 @@ if mode == 'SEND':
     print(" [x] Sent 'Antoine Heitzmann!'")
     
     connection.close()
-else:
-        
-   # newer pika version
-    channel.basic_consume(queue='presentation',
-                          on_message_callback=callback,                          
-                          auto_ack=True)
-   
-   #older pika version
-   # channel.basic_consume(callback,queue='presentation',no_ack= False)
-    
-    print(' [*] Waiting for messages. To exit press CTRL+C')
-    channel.start_consuming()
 
