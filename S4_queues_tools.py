@@ -38,22 +38,26 @@ connection = pika.BlockingConnection(params) # Connect to CloudAMQP
 
 channel = connection.channel()
 
-channel.queue_declare(queue='hello')
+channel.queue_declare(queue='presentation')
 
 
 if mode == 'SEND':
     channel.basic_publish(exchange='',
-                          routing_key='hello',
-                          body='Hello World!')
+                          routing_key='presentation',
+                          body='Antoine Heitzmann')
                           
-    print(" [x] Sent 'Hello World!'")
+    print(" [x] Sent 'Antoine Heitzmann!'")
     
     connection.close()
 else:
         
-    channel.basic_consume(queue='hello',
+   # newer pika version
+    channel.basic_consume(queue='presentation',
                           on_message_callback=callback,                          
                           auto_ack=True)
+   
+   #older pika version
+   # channel.basic_consume(callback,queue='presentation',no_ack= False)
     
     print(' [*] Waiting for messages. To exit press CTRL+C')
     channel.start_consuming()
